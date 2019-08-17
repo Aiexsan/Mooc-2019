@@ -25,15 +25,13 @@ public class Reseptit {
     public String getAinekset() {
         int index = 0;
         String aineslista = "";
-        System.out.println(this.ainekset.size());
         while (index < this.ainekset.size()) {
             if (index == this.ainekset.size() - 1) {
                 aineslista += this.ainekset.get(index);
-            } else {
-                aineslista += this.ainekset.get(index) + ",";
-                index++;
+                break;
             }
-            System.out.println(aineslista);
+            aineslista += this.ainekset.get(index) + ", ";
+            index++;
         }
         return aineslista;
     }

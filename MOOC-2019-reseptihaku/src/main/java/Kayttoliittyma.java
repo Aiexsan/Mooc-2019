@@ -95,8 +95,9 @@ public class Kayttoliittyma {
         String haettava = lukija.nextLine();
         System.out.println("Reseptit:");
         for (String in : reseptit.keySet()) {
-            if (reseptit.get(in).getAinekset().contains(haettava))
-                System.out.println(reseptit.get(in));
+            Reseptit x = reseptit.get(in);
+            if (x.getAinekset().contains(haettava))
+                System.out.println(x);
         }
         
     }
